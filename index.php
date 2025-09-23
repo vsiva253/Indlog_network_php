@@ -24,7 +24,6 @@ require_once 'includes/functions.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="theme-light">
-    <!-- Header -->
     <?php include 'includes/header.php'; ?>
     
     <!-- Hero Section -->
