@@ -15,6 +15,59 @@
     to { transform: rotate(360deg); }
 }
 
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Enhanced Button States */
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn:disabled:hover {
+    transform: none;
+}
+
+/* Touch-friendly Interactive Elements */
+@media (hover: none) and (pointer: coarse) {
+    .btn:active {
+        transform: scale(0.98);
+    }
+    
+    .nav-link:active {
+        transform: scale(0.98);
+    }
+    
+    .feature-card:active {
+        transform: scale(0.98);
+    }
+    
+    .member-card:active {
+        transform: scale(0.98);
+    }
+}
+
 /* Smooth Scrolling Enhancement */
 html {
     scroll-padding-top: 80px;
@@ -43,24 +96,37 @@ html {
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    position: relative;
 }
 
 .table-responsive::-webkit-scrollbar {
-    height: 8px;
+    height: 6px;
 }
 
 .table-responsive::-webkit-scrollbar-track {
     background: var(--light-purple);
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 .table-responsive::-webkit-scrollbar-thumb {
     background: var(--primary-purple);
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 .table-responsive::-webkit-scrollbar-thumb:hover {
     background: var(--dark-purple);
+}
+
+/* Mobile table enhancements */
+@media (max-width: 767px) {
+    .table-responsive {
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .table-responsive::-webkit-scrollbar {
+        height: 4px;
+    }
 }
 
 /* Form Validation Styles */

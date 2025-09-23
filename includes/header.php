@@ -5,8 +5,15 @@
             <img src="assets/indlog_logo.svg" alt="INDLOG" class="logo-img">
         </div>
         
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
         <!-- Navigation Menu -->
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="nav-menu">
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#network" class="nav-link">Network</a>
