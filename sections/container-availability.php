@@ -48,8 +48,11 @@
             </table>
         </div>
         
-        <div class="text-center">
-            <a href="#all-containers" class="btn btn-primary">View all Containers</a>
-        </div>
+      <div class="text-center" style="display: flex; justify-content: center;">
+    <a href="#all-containers" class="btn btn-primary" style="width: 200px; display: flex; justify-content: center; align-items: center;">
+        View all Containers
+    </a>
+</div>
+
     </div>
 </section>
