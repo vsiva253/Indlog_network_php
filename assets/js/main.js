@@ -146,10 +146,65 @@ function showFormMessage(input, message, type) {
     }, 5000);
 }
 
-// Mobile menu toggle (for future enhancement)
+// Mobile menu toggle functionality
 function initMobileMenu() {
-    // This would be implemented when adding a mobile hamburger menu
-    console.log('Mobile menu initialized');
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (!mobileToggle || !navMenu) return;
+    
+    // Toggle mobile menu
+    mobileToggle.addEventListener('click', function() {
+        const isActive = this.classList.contains('active');
+        
+        this.classList.toggle('active');
+        this.setAttribute('aria-expanded', !isActive);
+        navMenu.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = !isActive ? 'hidden' : '';
+    });
+    
+    // Close menu when clicking on nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileToggle.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!mobileToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            mobileToggle.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            mobileToggle.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', debounce(function() {
+        if (window.innerWidth > 767) {
+            mobileToggle.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }, 250));
 }
 
 // Make tables responsive
