@@ -1,5 +1,5 @@
 <footer class="footer" id="contact">
-    <div class="container">
+    <div class="contaner">
         <div class="footer-content">
             <!-- Company Info -->
             <div class="footer-section">
