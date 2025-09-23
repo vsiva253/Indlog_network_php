@@ -1,0 +1,261 @@
+/* Additional Component Styles for INDLOG Website */
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Smooth Scrolling Enhancement */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* Focus Styles for Accessibility */
+.btn:focus,
+.nav-link:focus,
+.newsletter-input:focus {
+    outline: 2px solid var(--primary-purple);
+    outline-offset: 2px;
+}
+
+/* Hover Effects */
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover .member-logo {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Table Responsive Enhancements */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: var(--light-purple);
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: var(--primary-purple);
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-purple);
+}
+
+/* Form Validation Styles */
+.form-error {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-success {
+    color: var(--success-green);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.newsletter-input.error {
+    border: 2px solid #dc2626;
+}
+
+.newsletter-input.success {
+    border: 2px solid var(--success-green);
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-purple);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--dark-purple);
+    transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-purple);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-purple);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-purple);
+}
+
+/* Selection Styles */
+::selection {
+    background-color: var(--primary-purple);
+    color: var(--white);
+}
+
+::-moz-selection {
+    background-color: var(--primary-purple);
+    color: var(--white);
+}
+
+/* Print Optimizations */
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    
+    .hero-image {
+        background: #f0f0f0 !important;
+    }
+    
+    .feature-card,
+    .member-card {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+    }
+}
+
+/* High DPI Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-icon,
+    .feature-icon,
+    .member-logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced Data Mode */
+@media (prefers-reduced-data: reduce) {
+    .hero-image {
+        background: var(--primary-purple);
+    }
+    
+    .newsletter::before {
+        display: none;
+    }
+}
+
+/* Custom Properties for Theme Switching */
+.theme-light {
+    --primary-purple: #584BD4;
+    --dark-purple: #4C1D95;
+    --light-purple: #F3F4F6;
+    --white: #ffffff;
+    --dark-gray: #1F2937;
+    --light-gray: #6B7280;
+    --border-gray: #E5E7EB;
+    --success-green: #10B981;
+    --success-green-light: #D1FAE5;
+    --success-green-dark: #065F46;
+    --success-green-border: #A7F3D0;
+    --warning-orange: #F59E0B;
+    --warning-orange-light: rgba(245, 158, 11, 0.1);
+    --footer-dark: #090815;
+    --gradient-red: #DC2626;
+}
+
+.theme-dark {
+    --primary-purple: #8B5CF6;
+    --dark-purple: #7C3AED;
+    --light-purple: #1F2937;
+    --white: #111827;
+    --dark-gray: #F9FAFB;
+    --light-gray: #D1D5DB;
+    --border-gray: #374151;
+}
+
+/* Utility Classes for Spacing */
+.space-y-1 > * + * { margin-top: 0.25rem; }
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-3 > * + * { margin-top: 0.75rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.space-y-5 > * + * { margin-top: 1.25rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+
+.space-x-1 > * + * { margin-left: 0.25rem; }
+.space-x-2 > * + * { margin-left: 0.5rem; }
+.space-x-3 > * + * { margin-left: 0.75rem; }
+.space-x-4 > * + * { margin-left: 1rem; }
+.space-x-5 > * + * { margin-left: 1.25rem; }
+.space-x-6 > * + * { margin-left: 1.5rem; }
