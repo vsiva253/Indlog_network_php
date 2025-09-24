@@ -23,6 +23,8 @@ require_once 'includes/functions.php';
     <?php include 'sections/about/about-hero.php'; ?>
     <?php include 'sections/about/about-intro.php'; ?>
     <?php include 'sections/about/about-mission.php'; ?>
+        <?php include 'sections/about/why-join.php'; ?>
+
 
     <?php include 'includes/footer.php'; ?>
     <script src="assets/js/main.js"></script>
