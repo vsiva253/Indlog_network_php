@@ -386,6 +386,13 @@ body {
   align-items: center;
 }
 
+.about-grid.about-right-image .about-copy {
+  order: 1;
+}
+.about-grid.about-right-image .about-media {
+  order: 2;
+}
+
 .about-copy h2 {
   font-size: 2.2rem;
   font-weight: 800;
@@ -420,6 +427,28 @@ body {
   .about-copy h2 {
     font-size: 1.8rem;
   }
+}
+
+/* Mission Section */
+.mission-section {
+  background-color: var(--white);
+}
+.mission-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mission-wrap h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+.mission-wrap p {
+  font-size: 1.05rem;
+  color: var(--light-gray);
+  line-height: 1.9;
+  margin-bottom: 0.75rem;
 }
 
 .section-header {
