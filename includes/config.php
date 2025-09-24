@@ -61,6 +61,7 @@ $latest_members = [
         'phone' => '+971-336 8040',
         'website' => 'www.imexshipping.com',
         'logo' => 'assets/images/member-logos/imex-logo.png'
-    ]
+    ],
+    
 ];
 ?>
