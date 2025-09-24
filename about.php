@@ -19,20 +19,9 @@ require_once 'includes/functions.php';
 <body class="theme-light">
     <?php include 'includes/header.php'; ?>
 
-<!-- About Hero Section -->
-<section class="page-hero" style="--hero-image: url('https://www.indlognetwork.com/contact/truckBG.webp');">
-    <div class="container">
-        <div class="page-hero-content">
-            <h1> INDLOG NETWORK</h1>
-            <p>The Only Global Network Bridging NVOCCs & Freight Forwarders — Access Live Container Availability, Expand Reach, and Optimize Logistics. Powered by MFA Network INC.</p>
-<a href="index.php#join" class="btn btn-primary" style="width:200px; text-align:center; display:inline-block; margin-left:0;">
-    Explore the Network
-</a>
-     </div>
-    </div>
-</section>
 
-
+    <?php include 'sections/about/about-hero.php'; ?>
+    <?php include 'sections/about/about-intro.php'; ?>
 
     <?php include 'includes/footer.php'; ?>
     <script src="assets/js/main.js"></script>
