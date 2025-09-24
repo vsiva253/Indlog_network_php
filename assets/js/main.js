@@ -452,7 +452,10 @@ function initLatestMembersSlider() {
     const sliderWidth = slider.clientWidth;
     const slideWidth =
       (sliderWidth - gap * (slidesPerView - 1)) / slidesPerView;
-    const offset = currentPage * (slideWidth * slidesPerView + gap);
+    // Align pages so the first card of each page sits flush left.
+    // Step size is page width plus the single inter-page gap.
+    const step = slidesPerView * (slideWidth + gap);
+    const offset = currentPage * step;
     track.style.transform = `translate3d(${-offset}px, 0, 0)`;
     updateDots();
     updateVisibleSlides();

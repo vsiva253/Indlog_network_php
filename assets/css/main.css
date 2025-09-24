@@ -758,14 +758,14 @@ body {
 }
 
 .latest-members .members-grid {
-  display: flex;
+  display: flex !important;
   gap: 2rem;
   overflow: hidden;
   background-color: transparent;
 }
 
 .latest-members .members-track {
-  display: flex;
+  display: flex !important;
   gap: 2rem;
   flex-wrap: nowrap;
   will-change: transform;
@@ -807,7 +807,13 @@ body {
 
 @media (max-width: 767px) {
   .latest-members .member-card {
-    flex: 0 0 100%;
+    flex: 0 0 20%;
+  }
+  .latest-members .members-track {
+    gap: 1rem;
+  }
+  .latest-members .members-grid {
+    gap: 1rem;
   }
 }
 
