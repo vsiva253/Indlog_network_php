@@ -11,11 +11,10 @@
       
       <div style="max-width: 700px; margin: 0 auto; text-align: center;">
         <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 16px;">
-          Join us in redefining how the logistics world connects.
+        Connect. Collaborate. Ship Smarter.
         </h2>
         <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 24px;">
-          Whether you're an NVOCC or a Freight Forwarder, INDLOG is your gateway 
-          to seamless container collaboration.
+  The Only Global Network Bridging NVOCCs & Freight Forwarders — Access Live Container Availability, Expand Reach, and Optimize Logistics. Powered by MFA Network INC.
         </p>
         <button type="button" class="newsletter-btn" 
                 style="padding: 14px 28px; 
@@ -30,7 +29,7 @@
                        align-items: center; 
                        gap: 8px; 
                        transition: background 0.3s;">
-          Become a Member Now
+          Join the Network Now
 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.33325 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8 3.33325L12.6667 7.99992L8 12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
