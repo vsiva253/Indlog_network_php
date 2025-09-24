@@ -310,6 +310,70 @@ body {
   padding: 5rem 0;
 }
 
+/* Page Hero (for About and other standalone pages) */
+.page-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  z-index: 0;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-content {
+  text-align: center;
+  color: var(--white);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.page-hero-content p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 767px) {
+  .page-hero {
+    min-height: 50vh;
+  }
+  .page-hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .page-hero-content p {
+    font-size: 1rem;
+  }
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 4rem;

@@ -14,8 +14,8 @@
         
         <!-- Navigation Menu -->
         <nav class="nav-menu" id="nav-menu">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#about" class="nav-link">About</a>
+            <a href="index.php" class="nav-link">Home</a>
+            <a href="about.php" class="nav-link">About</a>
             <a href="#network" class="nav-link">Network</a>
             <a href="#contact" class="nav-link">Contact Us</a>
         </nav>
