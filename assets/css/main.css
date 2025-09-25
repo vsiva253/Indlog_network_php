@@ -313,6 +313,10 @@ body {
   padding: 5rem 0;
 }
 
+.networksection {
+  padding: 8rem 8rem 0 8rem;
+}
+
 /* Page Hero (for About and other standalone pages) */
 .page-hero {
   position: relative;
